@@ -7,5 +7,4 @@ def requests_responce(url, method='get', data_json=None):
     resp = getattr(requests, method)(url, json=data_json)
     if resp.status_code != 200:
         return False, resp
-        # raise print('{} /tasks/ {}'.format(method.upper(), resp.status_code))
     return True, resp
